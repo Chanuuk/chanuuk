@@ -1,0 +1,334 @@
+html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanuukland</title>
+    <style>
+        /* --- VARIABLES Y ESTILOS BASE --- */
+        :root {
+            --bg-color: #4a739d; /* Azul intensificado, profundo y elegante */
+            --text-color: #ffffff; /* Blanco puro para un contraste perfecto */
+            --accent-color: #cbd5e1; /* Azul claro/grisáceo para textos secundarios */
+            --light-gray: rgba(255, 255, 255, 0.2); /* Líneas divisorias sutiles y translúcidas */
+            --max-width: 900px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        /* --- CONTENEDORES --- */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 6rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(74, 115, 157, 0.85); /* Fondo azul intenso translúcido */
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        /* --- SECCIÓN: INICIO (HERO) --- */
+        #inicio {
+            padding-top: 12rem;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            max-width: 600px;
+        }
+
+        /* --- SECCIÓN: SOBRE MÍ --- */
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- SECCIÓN: PROYECTOS --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: transparent;
+        }
+
+        .project-card h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: var(--accent-color);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--text-color);
+            padding-bottom: 2px;
+        }
+
+        /* --- SECCIÓN: CONTACTO --- */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 500px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--light-gray);
+            background: rgba(255, 255, 255, 0.1); /* Fondo blanco translúcido sutil */
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--text-color);
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--text-color);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-submit {
+            align-self: flex-start;
+            padding: 0.8rem 2rem;
+            background-color: var(--text-color);
+            color: #4a739d; /* Texto del botón con el color del fondo */
+            border: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            font-weight: 600;
+            transition: opacity 0.2s ease;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 4rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--accent-color);
+        }
+
+        /* --- RESPONSIVE DESIGN (MÓVILES) --- */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--bg-color);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <header>
+        <div class="container nav">
+            <a href="#inicio" class="logo">CHANUUKLAND</a>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- SECCIÓN: INICIO -->
+    <section id="inicio">
+        <div class="container hero-content">
+            <h1>Ideas, Técnología y mucho más <br>en un solo espacio.</h1>
+            <p>Bienvenido a Chanuukland. Aquí comparto mi viaje explorando la tecnología y muchas cosas más.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: SOBRE MÍ -->
+    <section id="sobre-mi">
+        <div class="container about-content">
+            <h2>Sobre mí</h2>
+            <p>Hola, soy Chanuuk, el creador de Chanuukland. Me apasiona construir cosas funcionales y atractivas en la web. Creo que menos es más, y aplico esa filosofía en los ámbitos de mi vida.</p>
+            <p>En este blog encontrarás mis notas personales sobre proyectos, aprendizajes y la documentación de las herramientas que voy descubriendo en el camino.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: PROYECTOS -->
+    <section id="proyectos">
+        <div class="container">
+            <h2>Proyectos</h2>
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <h3>Proyecto 1: Aplicación web</h3>
+                    <p>Una aplicación web interactiva desarrollada con HTML5 moderno y JavaScript adaptativo.</p>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <h3>Proyecto 2: Interfaz de usuario/a</h3>
+                    <p>Diseño de interfaz de usuario enfocado en la usabilidad y la velocidad de carga.</p>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <h3>Proyecto 3: Repositorio de herramientas</h3>
+                    <p>Repositorio de herramientas útiles optimizado para integraciones en la nube.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+  <p style="text-align: center;"> © 2026 Chanuukland. Todos los derechos reservados.</p>                         
