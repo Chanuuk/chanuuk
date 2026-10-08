@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog Minimalista</title>
+    <style>
+        /* CONFIGURACIÓN GENERAL */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e293b; /* Azul marino muy oscuro para el texto principal */
+            background-color: #f0f4f8; /* Fondo azul claro, suave y poco saturado */
+            line-height: 1.7;
+            padding: 3rem 1rem;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #1e293b;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        a:hover {
+            opacity: 0.6;
+        }
+
+        /* CABECERA */
+        header {
+            margin-bottom: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* LISTA DE ARTÍCULOS */
+        .post-list {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+        }
+
+        article .post-meta {
+            font-size: 0.85rem;
+            color: #64748b; /* Azul grisáceo para las fechas */
+            margin-bottom: 0.5rem;
+        }
+
+        article h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+            color: #0f172a; /* Títulos ligeramente más oscuros */
+        }
+
+        article p {
+            font-size: 1.05rem;
+            color: #334155; /* Texto del artículo en azul grisáceo oscuro */
+            text-align: justify; /* <-- Añadido para justificar los textos */
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            margin-top: 6rem;
+            padding-top: 2rem;
+            border-top: 1px solid #cbd5e1; /* Línea divisoria suave */
+            font-size: 0.85rem;
+            color: #64748b;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Cabecera del Blog -->
+        <header>
+            <h1><a href="#">Chanuukland</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Artículos</a></li>
+                    <li><a href="#">Sobre mí</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contenedor de publicaciones -->
+        <main class="post-list">
+            
+            <!-- Artículo 1 -->
+            <article>
+                <div class="post-meta">8 de Octubre, 2026</div>
+                <h2><a href="#">El arte de simplificar tu espacio de trabajo</a></h2>
+                <p>Vivimos saturados de estímulos en un mundo que constantemente nos exige atención.
+Nuestros espacios cotidianos suelen ser el reflejo exacto de esa sobrecarga mental crónica.
+Acumular objetos innecesarios en el escritorio o la casa genera un ruido invisible.
+Cada elemento que nos rodea compite de forma silenciosa por capturar el enfoque.
+Una mesa abarrotada de papeles, tazas y cables fragmenta la capacidad de concentración.
+Por el contrario, un entorno visualmente limpio actúa como un bálsamo para la mente.
+Al retirar lo superfluo, el cerebro descansa al no tener que procesar distractores.
+El minimalismo no es solo una elección estética, sino una poderosa herramienta psicológica.
+Menos pertenencias físicas se traducen de inmediato en menos tareas pendientes y preocupaciones.
+La claridad del espacio exterior promueve una profunda sensación de orden interno.
+En un lugar despejado, las ideas fluyen con mayor naturalidad, rapidez y soltura.
+La productividad se dispara cuando el único foco visible es la tarea del momento.
+Además, la reducción de objetos simplifica las rutinas y regala valiosos minutos diarios.
+Sentarse a trabajar en un área minimalista reduce la ansiedad y el agobio general.
+Esa paz mental nos permite tomar decisiones más acertadas y con menos esfuerzo.
+El orden nos devuelve el control sobre el tiempo y nuestra propia energía mental.
+Transformar tu entorno es el primer paso para rediseñar por completo tu enfoque.
+Descubrir el vacío es, en realidad, encontrar el espacio que tu creatividad necesitaba.</p>
+            </article>
+
+            <!-- Artículo 2 -->
+            <article>
+                <div class="post-meta">5 de Octubre, 2026</div>
+                <h2><a href="#">Diseño invisible: cuando lo complejo parece simple</a></h2>
+                <p>El diseño excepcional rara vez grita para llamar nuestra atención en el día a día.
+De hecho, las mejores interfaces y productos son aquellos que se vuelven invisibles al usarlos.
+Esta es la premisa fundamental sobre la que se erige el minimalismo digital moderno.
+En lugar de saturar con funciones innecesarias, busca simplificar la interacción con la tecnología.
+El verdadero valor de una herramienta no radica en su complejidad, sino en su utilidad.
+Cuando un software se diseña pensando en la intuición, elimina por completo la fricción.
+Los flujos de trabajo se vuelven naturales y no requieren un esfuerzo mental extra.
+La reducción de elementos visuales en pantalla no es por estética, sino por efectividad.
+Cada botón, color y tipografía debe tener un propósito claro que aporte valor real.
+Al limpiar la interfaz, se protege el recurso más escaso del usuario: su atención.
+El minimalismo digital combate de frente la fatiga cognitiva provocada por las notificaciones.
+Permite que las personas completen sus tareas sin perderse en un laberinto de opciones.
+Un buen diseño respeta el tiempo de la gente y no genera dependencias innecesarias.
+Se integra en la rutina diaria como una extensión natural de nuestras propias capacidades.
+Cuando la tecnología no interrumpe ni distrae, la experiencia se vuelve verdaderamente placentera.
+El éxito del diseño moderno se mide por la paz y fluidez que aporta al usuario.
+Menos ruido en los dispositivos se traduce directamente en más espacio para la vida real.
+Diseñar para integrar es, en última instancia, diseñar con empatía y respeto absoluto.</p>
+            </article>
+
+            <!-- Artículo 3 -->
+            <article>
+                <div class="post-meta">28 de Septiembre, 2026</div>
+                <h2><a href="#">Rutinas matutinas sin prisa</a></h2>
+                <p>Despertar cada mañana y encender el teléfono es entregar nuestra mente a los demás.
+Las notificaciones configuran una agenda ajena que secuestra nuestra paz de inmediato.
+Frente a esa inercia digital, frenar al amanecer se convierte en un acto de resistencia.
+Reclamar las primeras horas del día es declarar que tu tiempo te pertenece solo a ti.
+Es levantar un muro invisible contra la prisa, la hiperconectividad y la demanda externa.
+En lugar de mirar una pantalla brillante, el cuerpo agradece la textura táctil del papel.
+Un libro abierto o un cuaderno en blanco invitan a una introspección profunda y calmada.
+La tinta se mueve al ritmo pausado de las ideas propias, no al de un algoritmo voraz.
+Mientras tanto, el aroma del café recién hecho inunda el espacio con calidez real.
+Cada sorbo se disfruta con plena presencia, saboreando el instante sin ninguna prisa.
+El silencio matutino deja de ser un vacío incómodo y se transforma en un refugio sagrado.
+Es en esa quietud donde el pensamiento se organiza de forma libre y sin interferencias.
+Nadie te pide nada, nadie compite por capturar tu limitada y valiosa atención.
+Este ritual analógico restaura la soberanía sobre tu atención y tu energía mental.
+Te permite decidir de manera consciente cómo vas a habitar las horas que tienes por delante.
+No se trata de aislarse del mundo, sino de prepararse adecuadamente para salir a él.
+Construir este santuario diario te devuelve la calma indispensable para vivir con foco.
+Al final, desconectarse temprano es la única forma real de conectar contigo mismo.</p>
+            </article>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>© 2026 Mi Blog Minimalista. Creado con simplicidad.Apoyado en IA.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
